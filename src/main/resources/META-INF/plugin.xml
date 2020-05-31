@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>org.non.null.dinu.DiscordPanel</id>
+    <name>Discord Panel</name>
+    <vendor email="dinu.blanovschi001@gmail.com" url="https://www.github.com/NonNullDinu">NonNullDinu</vendor>
+
+    <description><![CDATA[
+        This plugin adds a small discord client tool window.
+        Note that this plugin uses JCEF; you should have it in the runtime.
+        This plugin lives on GitHub; you can find it <a href="https://github.com/NonNullDinu/DiscordPanel">here</a>.
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Discord Panel" anchor="bottom" factoryClass="discordPanel.DiscordPanelFactory"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+<!--        <action-->
+<!--                id="DiscordPanel.Open"-->
+<!--                class="discordPanel.PanelOpened"-->
+<!--                text="Open the Discord Panel"-->
+<!--                description="Open the discord panel">-->
+<!--            <add-to-group group-id="EditorPopupMenu" anchor="last"/>-->
+<!--        </action>-->
+    </actions>
+</idea-plugin>
