@@ -1,7 +1,7 @@
 <idea-plugin>
-    <id>org.non.null.dinu.DiscordPanel</id>
+    <id>org.dblanovschi.DiscordPanel</id>
     <name>Discord Panel</name>
-    <vendor email="dinu.blanovschi001@gmail.com" url="https://www.github.com/NonNullDinu">NonNullDinu</vendor>
+    <vendor email="dinu.blanovschi@criptext.com" url="https://www.github.com/dblanovschi">Dinu Blanovschi</vendor>
 
     <description><![CDATA[
         This plugin adds a small discord client tool window.
@@ -16,15 +16,4 @@
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow id="Discord Panel" anchor="bottom" factoryClass="discordPanel.DiscordPanelFactory"/>
     </extensions>
-
-    <actions>
-        <!-- Add your actions here -->
-<!--        <action-->
-<!--                id="DiscordPanel.Open"-->
-<!--                class="discordPanel.PanelOpened"-->
-<!--                text="Open the Discord Panel"-->
-<!--                description="Open the discord panel">-->
-<!--            <add-to-group group-id="EditorPopupMenu" anchor="last"/>-->
-<!--        </action>-->
-    </actions>
 </idea-plugin>
