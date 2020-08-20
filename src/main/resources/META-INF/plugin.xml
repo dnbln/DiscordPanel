@@ -1,12 +1,15 @@
 <idea-plugin>
     <id>org.dblanovschi.DiscordPanel</id>
     <name>Discord Panel</name>
+    <version>0.1.2-SNAPSHOT</version>
     <vendor email="dinu.blanovschi@criptext.com" url="https://www.github.com/dblanovschi">Dinu Blanovschi</vendor>
 
     <description><![CDATA[
         This plugin adds a small discord client tool window.
-        Note that this plugin uses JCEF; you should have it in the runtime.
-        This plugin lives on GitHub; you can find it <a href="https://github.com/NonNullDinu/DiscordPanel">here</a>.
+        Note that this plugin uses JCEF; you should have it in the runtime you're using
+        (for 2020.2+ it's already bundled, for 2020.1 and before you should use this with a jcef runtime and the
+        Choose Runtime plugin).
+        This plugin lives on GitHub; you can find it <a href="https://github.com/dblanovschi/DiscordPanel">here</a>.
     ]]></description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html

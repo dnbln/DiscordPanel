@@ -5,7 +5,7 @@ plugins {
 
 
 group = "org.dblanovschi.DiscordPanel"
-version = "0.1.1-SNAPSHOT"
+version = "0.1.2-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -26,9 +26,9 @@ tasks {
         kotlinOptions.jvmTarget = "11"
     }
     patchPluginXml {
-        changeNotes("""
-        Fix focus bug;
-        It is now DumbAware
+        changeNotes(
+        """
+        Add icons
         """.trimMargin())
     }
 }

@@ -1,13 +1,17 @@
 package discordPanel
 
+import com.intellij.openapi.util.IconLoader
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.ui.jcef.JBCefBrowser
-import com.intellij.ui.jcef.JBCefCookie
 import java.awt.event.FocusEvent
 import java.awt.event.FocusListener
 import javax.swing.JComponent
 
 class DiscordPanelViewer(window: ToolWindow) {
+    companion object {
+        val ICON = IconLoader.getIcon("/icons/discord.svg")
+    }
+
     @JvmField
     val jbrowser: JBCefBrowser = JBCefBrowser("https://discord.com/app")
     val content: JComponent
@@ -15,6 +19,7 @@ class DiscordPanelViewer(window: ToolWindow) {
 
     init {
         window.title = "Discord Panel"
+        window.setIcon(ICON)
         window.component.addFocusListener(object : FocusListener {
             override fun focusGained(focusEvent: FocusEvent) {
                 for (listener in jbrowser.component.focusListeners) listener.focusGained(focusEvent)
