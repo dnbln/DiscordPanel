@@ -1,11 +1,11 @@
 plugins {
     kotlin("jvm") version "1.3.72"
-    id("org.jetbrains.intellij") version "0.4.21"
+    id("org.jetbrains.intellij") version "0.6.4"
 }
 
 
 group = "org.dblanovschi.DiscordPanel"
-version = "0.1.2-SNAPSHOT"
+version = "0.1.3"
 
 repositories {
     mavenCentral()
@@ -18,7 +18,7 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version = "2020.2"
+    version = "2020.2.3"
 }
 
 tasks {
@@ -28,7 +28,8 @@ tasks {
     patchPluginXml {
         changeNotes(
         """
-        Add icons
+        - Allow plugin to be run in 2020.3(203.* builds) <br/>
+        - Add a way to reuse previous sessions (<a href="https://github.com/dblanovschi/DiscordPanel/issues/1">#1</a>) <br/>
         """.trimMargin())
     }
 }
