@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>org.dblanovschi.DiscordPanel</id>
     <name>Discord Panel</name>
-    <version>0.1.3-SNAPSHOT</version>
+    <version>0.1.3</version>
     <idea-version since-build="202.*"/>
     <vendor email="dinu.blanovschi@criptext.com" url="https://www.github.com/dblanovschi">Dinu Blanovschi</vendor>
 
