@@ -20,7 +20,7 @@ class DiscordPanelSettingsState : PersistentStateComponent<DiscordPanelSettingsS
         var sessionPath = ""
     }
 
-    private var _state = State()
+    var _state = State()
 
     override fun getState(): State = _state
 
