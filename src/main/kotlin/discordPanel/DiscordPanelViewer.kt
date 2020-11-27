@@ -1,16 +1,9 @@
 package discordPanel
 
-import com.intellij.openapi.fileChooser.FileChooser
-import com.intellij.openapi.fileChooser.FileChooserDescriptor
 import com.intellij.openapi.util.IconLoader
-import com.intellij.openapi.vfs.VfsUtil
 import com.intellij.openapi.wm.ToolWindow
-import com.intellij.ui.jcef.JBCefApp
 import com.intellij.ui.jcef.JBCefBrowser
-import com.intellij.ui.jcef.JBCefClient
 import com.jetbrains.cef.JCefAppConfig
-import org.cef.CefApp
-import org.cef.CefSettings
 import java.awt.event.FocusEvent
 import java.awt.event.FocusListener
 import javax.swing.JComponent
@@ -27,6 +20,12 @@ class DiscordPanelViewer(window: ToolWindow) {
 
     init {
         val cachePath = DiscordPanelSettingsState.getInstance().getSessionPath()
+
+        logger.info("Opening discord panel with 'cachePath=$cachePath'")
+        val properties = System.getProperties()
+        properties["ide.browser.jcef.log.level"] = "verbose"
+        System.setProperties(properties)
+
         if (cachePath != "") {
             val realCefSettings = JCefAppConfig.getInstance().cefSettings
             realCefSettings.cache_path = cachePath
