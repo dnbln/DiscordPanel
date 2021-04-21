@@ -1,11 +1,11 @@
 plugins {
-    kotlin("jvm") version "1.3.72"
-    id("org.jetbrains.intellij") version "0.6.5"
+    kotlin("jvm") version "1.4.32"
+    id("org.jetbrains.intellij") version "0.7.2"
 }
 
 
 group = "org.dblanovschi.DiscordPanel"
-version = "0.1.4"
+version = "0.1.5"
 
 repositories {
     mavenCentral()
@@ -18,7 +18,7 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version = "2020.3.1"
+    version = "2021.1"
 }
 
 tasks {
@@ -38,6 +38,6 @@ tasks {
     }
 
     runPluginVerifier {
-        setIdeVersions(listOf("IIC-2020.2.4", "IIC-2020.3.1"))
+        setIdeVersions(listOf("IIC-2020.3.1", "IIC-2021.1"))
     }
 }
